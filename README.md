@@ -31,3 +31,15 @@ php artisan serve
 > **NOTE:** a couple of commands was used to create the controller and the model for the `Clientes` entity such as:
 > * model: `php artisan make:model Cliente -m`
 > * controller: `php artisan make:controller ClienteController`
+
+### Request the API
+
+To get all `Clientes`:
+```bash
+curl -X GET localhost:8000/api/clientes
+```
+
+To add a new `Cliente`:
+```bash
+curl -X POST localhost:8000/api/clientes -H 'Content-Type: application/json' -d '{ "id": 1, "nombre_cliente": "John Doe", "email_cliente": "jdoe@mail.com", "telefono_cliente": "123456789"}'
+```

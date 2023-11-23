@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/clientes', [ClienteController::class, 'index']);
+
+Route::post('/clientes', [ClienteController::class, 'agregar']);
